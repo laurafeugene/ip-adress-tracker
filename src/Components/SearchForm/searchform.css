@@ -1,9 +1,13 @@
 .background{
 background-image:
 linear-gradient(to right, rgba(2,0,36,0.7595413165266106),rgba(0, 157, 255, 0.719)),
-url("src/assets/roads.jpg");
+url("src/assets/pattern-bg-desktop.png");
 background-size: cover;
-padding: 5%;
+padding: 2%;
+height: 24vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
 h1 {
