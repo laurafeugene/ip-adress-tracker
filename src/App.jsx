@@ -1,10 +1,13 @@
 import './App.css'
+import Map from './Components/Map/Map'
+import SearchForm from './Components/SearchForm/SearchForm'
 
 function App() {
 
   return (
     <>
-      <h1>Coucou !</h1>
+    <SearchForm />
+    <Map />
     </>
   )
 }
