@@ -1,9 +1,8 @@
 .background{
 background-image:
-linear-gradient(to right, rgba(2,0,36,0.7595413165266106),rgba(0, 157, 255, 0.719)),
+linear-gradient(to right, rgba(27, 8, 133, 0.548),rgba(49, 133, 243, 0.719)),
 url("src/assets/pattern-bg-desktop.png");
 background-size: cover;
-padding: 2%;
 height: 24vh;
 display: flex;
 flex-direction: column;
@@ -11,16 +10,18 @@ justify-content: center;
 }
 
 h1 {
-    font-size: 3.2em;
+    font-size: 2.2em;
+    font-weight: 500;
     line-height: 1.1;
     color: white;
+    padding-bottom: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
 .form{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
     justify-content: center;
 }
 
