@@ -1,5 +1,6 @@
 #map {
-    /* height: 180px; */
+   position: relative;
+    height: 500px;
 }
 
 h2 {
