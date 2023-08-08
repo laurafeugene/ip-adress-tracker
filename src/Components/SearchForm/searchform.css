@@ -1,0 +1,48 @@
+.background{
+background-image:
+linear-gradient(to right, rgba(2,0,36,0.7595413165266106),rgba(0, 157, 255, 0.719)),
+url("src/assets/roads.jpg");
+background-size: cover;
+padding: 5%;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: white;
+  }
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.searchform {
+border-radius: 8px 0px 0px 8px;
+border: 0.5px;
+width: 100%;
+max-width: 300px;
+padding: 1.2em 1.6em;
+font-size: 14.5px;
+cursor: pointer;
+}
+
+.button {
+border-radius: 0px 8px 8px 0px;
+padding: 1.2em 1.6em;
+border: 0.5px;
+background-color: rgb(95, 95, 95);
+cursor: pointer;
+}
+
+.button:hover {
+background-color: #333;
+}
+
+.error {
+  color: red;
+  background-color: white;
+}
