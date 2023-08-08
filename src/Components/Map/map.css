@@ -1,0 +1,11 @@
+#map {
+   position: relative;
+    height: 600px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
