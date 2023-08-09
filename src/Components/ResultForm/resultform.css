@@ -1,0 +1,37 @@
+.resultform {
+width: 90%;
+height: 10em;
+margin: auto;
+background: white;
+border-radius: 8px;
+border: 0.5px solid lightgray;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-direction: row;
+flex-wrap: wrap;
+position: absolute;
+top: 30%;
+left: 5%;
+z-index: 3;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p{
+    color: black;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+article {
+    border-right: 0.5px solid lightgray;
+    padding-right: 4rem;
+}
