@@ -1,20 +1,26 @@
 import { useEffect, useState } from 'react';
 import './ResultForm.css'
 import {client} from '../../api/api';
+import PropTypes from 'prop-types';
 
-function ResultForm() {
+
+function ResultForm(props) {
     const [data, setData] = useState(null);
 
+
     useEffect(() => {
-        client.get("", {
+        client
+          .get('', {
             params: {
-                apiKey: "at_6Ew9bBFZfU5khd8IKOvOTARMLhzdP",
-                // ipAddress: "8.8.8.8",
+              ipAddress: props.inputValue,
             },
-        }).then((response) => {
+          })
+          .then((response) => {
             setData(response.data);
-        });
-    }, []);
+            console.log(response.data);
+          });
+      }, [props.inputValue]);
+      console.log(props.inputValue);
     
     if (!data) return (<div>Loading...</div>);
     
@@ -35,5 +41,9 @@ function ResultForm() {
      </div>
       )
 }
+
+ResultForm.propTypes = {
+    inputValue: PropTypes.string.isRequired,
+  };
 
 export default ResultForm;

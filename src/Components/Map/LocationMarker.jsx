@@ -4,6 +4,7 @@ import { Marker, Popup, useMapEvents, MapContainer, TileLayer } from 'react-leaf
 function LocationMarker() {
     const [position, setPosition] = useState(null);
 
+
     const map = useMapEvents({
         click() {
           map.locate()
