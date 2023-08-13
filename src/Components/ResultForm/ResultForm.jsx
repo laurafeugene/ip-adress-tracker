@@ -1,23 +1,49 @@
+import { useEffect, useState } from 'react';
 import './ResultForm.css'
+import {client} from '../../api/api';
+import PropTypes from 'prop-types';
 
-function ResultForm() {
+
+function ResultForm(props) {
+    const [data, setData] = useState(null);
+
+
+    useEffect(() => {
+        client
+          .get('', {
+            params: {
+              ipAddress: props.inputValue,
+            },
+          })
+          .then((response) => {
+            setData(response.data);
+            console.log(response.data);
+          });
+      }, [props.inputValue]);
+      console.log(props.inputValue);
+    
+    if (!data) return (<div>Loading...</div>);
     
       return (
      <div className="resultform">
         <article><h3>IP Address</h3>
-            <p>coucou</p>
+            <p>{data.ip}</p>
         </article>
         <article><h3>Localisation</h3>
-            <p>coucou</p>
+            <p>{data.location.city}</p>
         </article>
         <article><h3>Timezone</h3>
-            <p>coucou</p>
+            <p>{data.location.timezone}</p>
         </article>
         <article><h3>ISP</h3>
-            <p>coucou</p>
+            <p>{data.isp}</p>
         </article>
      </div>
       )
 }
+
+ResultForm.propTypes = {
+    inputValue: PropTypes.string.isRequired,
+  };
 
 export default ResultForm;
