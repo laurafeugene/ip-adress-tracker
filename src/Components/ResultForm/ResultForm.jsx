@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function ResultForm({data}) {
 
 
-    if (!data) return (<div>Loading...</div>);
+    if (!data) return (<div>Enter an IP Address...</div>);
     
       return (
      <div className="resultform">
