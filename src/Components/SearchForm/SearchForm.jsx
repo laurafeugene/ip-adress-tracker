@@ -1,5 +1,8 @@
 import "./searchform.css";
 import { useState } from "react";
+import { client } from "../../api/api";
+import ResultForm from '../ResultForm/ResultForm'; 
+
 
 function SearchForm() {
   const [inputValue, setInputValue] = useState("");
@@ -20,11 +23,23 @@ function SearchForm() {
     if (inputValue.length >= 11) {
       // Submit form if input is valid
         setInputError(null);
-    } else {
-      setInputError("Input must be at least 11 characters");
-    }
-    console.log(`${inputValue}`);
-  };
+        console.log(inputValue)
+      client.get('', {
+        params: {
+          ipAddress: inputValue,
+          },
+          })
+  .then((response) => {
+    const data = response.data;
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+    });
+  } else {
+    setInputError("Input must be at least 11 characters");
+  }};
+
   return (
     <section className="background">
       <h1>IP Address Tracker</h1>

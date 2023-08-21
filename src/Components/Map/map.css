@@ -1,6 +1,6 @@
-#map {
-   position: relative;
-    height: 500px;
+#map{
+    position: relative;
+    z-index: 1;
 }
 
 h2 {
