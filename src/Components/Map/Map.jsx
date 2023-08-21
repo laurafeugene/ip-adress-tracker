@@ -1,21 +1,11 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import LocationMarker from './LocationMarker';
-import { useEffect, useState } from 'react';
-import { client } from '../../api/api';
 
-function CustomMap(){
-const [lat, setLat] = useState("");
-const [lng, setLng] = useState("");
 
-useEffect(() => {
-client.get("")
-.then((response) => {
-    setLat(response.data.location.lat);
-    setLng(response.data.location.lng);
-});
-}, []);
-
-const position = [Number(lat), Number(lng)];
+function CustomMap({data}){
+  if (!data) return (<div>Enter an IP Address...</div>);
+const position = [Number(data.location.lat), Number(data.location.lng)];
+console.log(position);
 
   return (
     <div id="map">
@@ -27,7 +17,7 @@ const position = [Number(lat), Number(lng)];
 <LocationMarker />
   <Marker position={position}>
     <Popup>
-      A pretty CSS3 popup. <br /> Easily customizable.
+      Address IP is based here !
     </Popup>
   </Marker>
 </MapContainer>

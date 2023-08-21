@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Marker, Popup, useMapEvents, MapContainer, TileLayer } from 'react-leaflet';
 
+// Function to know where I am on the map
+
 function LocationMarker() {
     const [position, setPosition] = useState(null);
 
