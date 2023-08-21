@@ -1,6 +1,8 @@
 import "./searchform.css";
 import { useState } from "react";
 import { client } from "../../api/api";
+import ResultForm from '../ResultForm/ResultForm'; 
+
 
 function SearchForm() {
   const [inputValue, setInputValue] = useState("");

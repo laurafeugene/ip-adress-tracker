@@ -5,14 +5,14 @@ import ResultForm from './Components/ResultForm/ResultForm'
 import { useState } from 'react'
 
 function App() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState(''); // Initial value
 
 
   return (
     <>
-     <SearchForm inputValue={inputValue} setInputValue={setInputValue} />
-      <ResultForm inputValue={inputValue} />
-    <Map />
+     <SearchForm setInputValue={setInputValue} />
+      <ResultForm inputValue={inputValue} /> {/*inputValue comme une prop */}
+      <Map />
     </>
   )
 }

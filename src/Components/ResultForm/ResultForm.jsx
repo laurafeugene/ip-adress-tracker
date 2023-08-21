@@ -4,7 +4,7 @@ import {client} from '../../api/api';
 import PropTypes from 'prop-types';
 
 
-function ResultForm(props) {
+function ResultForm({inputValue}) {
     const [data, setData] = useState(null);
 
 
@@ -12,15 +12,15 @@ function ResultForm(props) {
         client
           .get('', {
             params: {
-              ipAddress: props.inputValue,
+              ipAddress: inputValue,
             },
           })
           .then((response) => {
             setData(response.data);
             console.log(response.data);
           });
-      }, [props.inputValue]);
-      console.log(props.inputValue);
+      }, [inputValue]);
+      console.log(`Erreur ici :`, inputValue);
     
     if (!data) return (<div>Loading...</div>);
     
