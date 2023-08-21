@@ -1,10 +1,9 @@
 import './ResultForm.css'
-import PropTypes from 'prop-types';
 
 
 function ResultForm({data}) {
 
-
+// TODO : ajouter du style à cette div
     if (!data) return (<div>Enter an IP Address...</div>);
     
       return (
@@ -24,9 +23,5 @@ function ResultForm({data}) {
      </div>
       )
 }
-
-ResultForm.propTypes = {
-    inputValue: PropTypes.string.isRequired,
-  };
 
 export default ResultForm;
