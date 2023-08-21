@@ -1,10 +1,9 @@
 import "./searchform.css";
 import { useState } from "react";
 import { client } from "../../api/api";
-import ResultForm from '../ResultForm/ResultForm'; 
 
 
-function SearchForm() {
+function SearchForm({setResultData}) {
   const [inputValue, setInputValue] = useState("");
   const [inputError, setInputError] = useState(null);
 
@@ -32,6 +31,7 @@ function SearchForm() {
   .then((response) => {
     const data = response.data;
     console.log(data);
+    setResultData(data);
   })
   .catch((error) => {
     console.log(error);
