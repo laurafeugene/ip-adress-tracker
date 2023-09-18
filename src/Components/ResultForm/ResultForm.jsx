@@ -1,28 +1,11 @@
-import { useEffect, useState } from 'react';
 import './ResultForm.css'
-import {client} from '../../api/api';
 import PropTypes from 'prop-types';
 
 
-function ResultForm({inputValue}) {
-    const [data, setData] = useState(null);
+function ResultForm({data}) {
 
 
-    useEffect(() => {
-        client
-          .get('', {
-            params: {
-              ipAddress: inputValue,
-            },
-          })
-          .then((response) => {
-            setData(response.data);
-            console.log(response.data);
-          });
-      }, [inputValue]);
-      console.log(`Erreur ici :`, inputValue);
-    
-    if (!data) return (<div>Loading...</div>);
+    if (!data) return (<div>Enter an IP Address...</div>);
     
       return (
      <div className="resultform">
